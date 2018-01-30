@@ -34,14 +34,14 @@
                   :else "10")))
 
   "Or your fate may be sealed"
-  (= 'doom (if-not (zero? __)
+  (= 'doom (if-not (= 4 3)
           'doom
           'more-doom))
 
   "In case of emergency, go fast"
-  (= "pretty fast"
-     (explain-exercise-velocity __))
+  (= "is that even exercise?"
+     (explain-exercise-velocity 'hop))
 
   "But admit it when you don't know what to do"
-  (= __
+  (= "is that even exercise?"
      (explain-exercise-velocity :watching-tv)))

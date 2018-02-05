@@ -10,38 +10,38 @@
 
 (meditations
   "You will face many decisions"
-  (= __ (if (false? (= 4 5))
+  (= :a (if (false? (= 4 5))
           :a
           :b))
 
   "Some of them leave you no alternative"
-  (= __ (if (> 4 3)
+  (= [] (if (> 4 3)
           []))
 
   "And in such a situation you may have nothing"
-  (= __ (if (nil? 0)
+  (= nil (if (nil? 0)
           [:a :b :c]))
 
   "In others your alternative may be interesting"
   (= :glory (if (not (empty? ()))
               :doom
-              __))
+              :glory))
 
   "You may have a multitude of possible paths"
   (let [x 5]
-    (= :your-road (cond (= x __) :road-not-taken
-                        (= x __) :another-road-not-taken
-                        :else __)))
+    (= "10" (cond (= x 3) :road-not-taken
+                  (= x 4) :another-road-not-taken
+                  :else "10")))
 
   "Or your fate may be sealed"
-  (= 'doom (if-not (zero? __)
+  (= 'doom (if-not (= 4 3)
           'doom
           'more-doom))
 
   "In case of emergency, go fast"
-  (= "pretty fast"
-     (explain-exercise-velocity __))
+  (= "is that even exercise?"
+     (explain-exercise-velocity 'hop))
 
   "But admit it when you don't know what to do"
-  (= __
+  (= "is that even exercise?"
      (explain-exercise-velocity :watching-tv)))
